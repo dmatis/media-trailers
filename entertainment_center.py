@@ -1,21 +1,26 @@
 import media
 import fresh_tomatoes
+import json
 
-toy_story = media.Movie("Toy Story",
-                        "A story about a boy and his toys",
-                        "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
-                        "https://www.youtube.com/watch?v=KYz2wyBy3kc")
+def add_movie(data):
+    json_data = ""
+    entry = {'title': data["Title"], 'year': data["Year"], 'plot': data["Plot"], 'poster': data["Poster"], 'trailer': "some-trailer"}
+    with open('media.json', 'r') as f:
+        json_data = json.load(f)
+    
+    if not any (entry['title'] == d['title'] for d in json_data['movies']):
+        with open('media.json', 'w') as json_output:
+            json_data['movies'].append(entry)
+            json.dump(json_data, json_output)
+    return 'Ok'
 
+def get_movies():
+    movies = []
+    with open('media.json') as json_data:
+        json_obj = json.load(json_data)
+        for i in json_obj['movies']:
+            curr_movie = media.Movie(i['title'],i['year'],i['plot'],i['poster'],i['trailer'])
+            movies.append(curr_movie)
+    fresh_tomatoes.open_movies_page(movies)
+    return 'Ok'
 
-avatar = media.Movie("Avatar",
-                        "A marine on an alien planet",
-                        "http://moviecultists.com/wp-content/uploads/2009/11/avatar-poster.jpg",
-                        "https://www.youtube.com/watch?v=5PSNL1qE6VY")
-
-the_matrix = media.Movie("The Matrix",
-                        "He chose the red pill",
-                        "https://www.movieposter.com/posters/archive/main/9/A70-4902",
-                        "https://www.youtube.com/watch?v=m8e-FF8MsqU")
-
-movies = [toy_story, avatar, the_matrix]
-fresh_tomatoes.open_movies_page(movies)

@@ -91,6 +91,7 @@ $(document).ready(function () {
     $(this).next("div").show("fast", showNext);
   });
 });
+
 </script>
 </head>
 '''
@@ -133,7 +134,7 @@ main_page_content = '''
       <ul class="nav navbar-nav">
         <li class="pull-left"><a href="#">Home</a></li>
         <li><a href="#addMovie" data-toggle="modal">Add Movie</a></li>
-        <li><a href="#addTV" data-toggle="modal">Add TV Show</a></li>
+        <!-- <li><a href="#addTV" data-toggle="modal">Add TV Show</a></li> -->
         <li class="social pull-right"><a href="#">Social Links</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -155,7 +156,15 @@ main_page_content = '''
           <h4 class="modal-title">Add Movie</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+
+        <form id="movie-form" action="http://localhost:5000/get_imdb" method="post">
+            <div class="form-group">
+            <label for="movie-title">Movie Title</label>
+                <input type="text" class="form-control" name="movie-title" placeholder="Enter Movie Title"/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -164,21 +173,8 @@ main_page_content = '''
     </div>
   </div>
 
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
 
-  <!-- Add TV Show Modal -->
+  <!-- Add TV Show Modal
   <div class="modal fade" id="addTV" role="dialog">
     <div class="modal-dialog">
 
@@ -188,32 +184,22 @@ main_page_content = '''
           <h4 class="modal-title">Add TV Show</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+
+        <form action="" role="form">
+            <div class="form-group">
+            <label for="tv-title">TV Show Title</label>
+                <input type="text" class="form-control" id="tv-title" placeholder="Enter TV Show"/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-  </div>
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-
-
-
+  </div> -->
 
   </body>
 </html>
@@ -264,4 +250,5 @@ def open_movies_page(movies):
 
     # open the output file in the browser (in a new tab, if possible)
     url = os.path.abspath(output_file.name)
-    webbrowser.open('file://' + url, new=2)
+    webbrowser.open('file://' + url, new=0)
+    return 'Ok'
