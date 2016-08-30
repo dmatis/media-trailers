@@ -1,9 +1,8 @@
 __author__ = 'Darren Matis'
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, request
 import entertainment_center
 import json
-import requests
 import urllib
 
 app = Flask(__name__)
