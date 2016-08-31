@@ -12,7 +12,7 @@ def index_page():
     return entertainment_center.get_movies()
 
 @app.route('/get_imdb', methods=['GET', 'POST'])
-def hello_world():
+def get_imdb_data():
     data = json.loads(urllib.urlopen("http://www.omdbapi.com/?t="+request.form['movie-title']).read())
     if data["Response"] == "True":
         entertainment_center.add_movie(data)

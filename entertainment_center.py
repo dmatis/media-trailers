@@ -22,6 +22,5 @@ def get_movies():
         for i in json_obj['movies']:
             curr_movie = media.Movie(i['title'],i['year'],i['plot'],i['poster'],i['trailer'])
             movies.append(curr_movie)
-    fresh_tomatoes.open_movies_page(movies)
-    return 'Ok'
+    return fresh_tomatoes.open_movies_page(movies)
 
