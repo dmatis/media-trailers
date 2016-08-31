@@ -1,10 +1,11 @@
 import media
 import fresh_tomatoes
 import json
+import search
 
 def add_movie(data):
     json_data = ""
-    entry = {'title': data["Title"], 'year': data["Year"], 'plot': data["Plot"], 'poster': data["Poster"], 'trailer': "some-trailer"}
+    entry = {'title': data["Title"], 'year': data["Year"], 'plot': data["Plot"], 'poster': data["Poster"], 'trailer': search.get_youtube_trailer(data["Title"])}
     with open('media.json', 'r') as f:
         json_data = json.load(f)
     
