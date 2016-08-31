@@ -173,38 +173,9 @@ main_page_content = '''
     </div>
   </div>
 
-
-  <!-- Add TV Show Modal
-  <div class="modal fade" id="addTV" role="dialog">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Add TV Show</h4>
-        </div>
-        <div class="modal-body">
-
-        <form action="" role="form">
-            <div class="form-group">
-            <label for="tv-title">TV Show Title</label>
-                <input type="text" class="form-control" id="tv-title" placeholder="Enter TV Show"/>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   </body>
 </html>
 '''
-
 
 # A single movie entry html template
 movie_tile_content = '''
@@ -213,7 +184,6 @@ movie_tile_content = '''
     <h2>{movie_title}</h2>
 </div>
 '''
-
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
@@ -235,20 +205,19 @@ def create_movie_tiles_content(movies):
         )
     return content
 
+def render(template_file, x):
+    f = open(template_file + '.html', 'r+')
+    buf = str(f.read())
+    f.close()
+    buf += x
+    return buf 
 
 def open_movies_page(movies):
-    # Create or overwrite the output file
-    output_file = open('fresh_tomatoes.html', 'w')
-
-    # Replace the movie tiles placeholder generated content
+    # Render template with vars to string buffer
+    # If error return error template & status code
+    # If success return string buffer
     rendered_content = main_page_content.format(
         movie_tiles=create_movie_tiles_content(movies))
-
-    # Output the file
-    output_file.write(main_page_head + rendered_content)
-    output_file.close()
-
-    # open the output file in the browser (in a new tab, if possible)
-    url = os.path.abspath(output_file.name)
-    webbrowser.open('file://' + url, new=0)
-    return 'OK'
+    x = main_page_head + rendered_content
+    content = render('fresh_tomatoes', x)
+    return content

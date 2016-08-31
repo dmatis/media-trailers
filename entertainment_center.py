@@ -13,7 +13,7 @@ def add_movie(data):
         with open('media.json', 'w') as json_output:
             json_data['movies'].append(entry)
             json.dump(json_data, json_output)
-    return 'Ok'
+    #return get_movies()
 
 def get_movies():
     movies = []
