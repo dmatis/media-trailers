@@ -4,7 +4,7 @@ A website containing trailers to all of my favorite movies and tv-shows.
 
 Features:
  * Adding a new movie will automatically pull its info from IMDB
- * The trailer is scraped automatically from Youtube
+ * The trailer is automatically scraped from Youtube
 
 ## Start Here
 
