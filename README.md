@@ -2,4 +2,4 @@
 A website containing trailers for my favorite movies and TV shows
 
 ## To view the hosted app:
-http://www.media-trailers.azurewebsites.net
+media-trailers.azurewebsites.net
