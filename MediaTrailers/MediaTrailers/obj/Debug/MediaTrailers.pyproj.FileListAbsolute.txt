@@ -1,0 +1,15 @@
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\attach_server.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\visualstudio_py_debugger.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\visualstudio_py_repl.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\visualstudio_py_util.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\__init__.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\__main__.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\AzureSetup.cfg
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\Microsoft.PythonTools.AzureSetup.exe
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\Microsoft.PythonTools.AzureSetup.exe.config
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\wfastcgi.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\web.config
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\web.debug.config
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Debug\deployment-updated-orig-prefix.txt
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\ptvs_virtualenv_proxy.py

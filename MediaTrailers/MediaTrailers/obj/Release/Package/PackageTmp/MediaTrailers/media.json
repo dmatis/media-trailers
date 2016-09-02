@@ -1,0 +1,20 @@
+{
+  "movies": [
+    {
+      "plot": "Dede is a sole parent trying to bring up her son Fred. When it is discovered that Fred is a genius, she is determined to ensure that Fred has all the opportunities that he needs, and that ...",
+      "title": "Little Man Tate",
+      "poster": "http://image.tmdb.org/t/p/original//rnwiTAaUTHx3PHatspgH5YTcohG.jpg",
+      "imdb_id": "tt0102316",
+      "year": "1991",
+      "trailer": "http://www.youtube.com/watch?v=c6ztmvqc72o"
+    },
+    {
+      "plot": "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.",
+      "title": "Finding Nemo",
+      "poster": "http://image.tmdb.org/t/p/original//zjqInUwldOBa0q07fOyohYCWxWX.jpg",
+      "imdb_id": "tt0266543",
+      "year": "2003",
+      "trailer": "http://www.youtube.com/watch?v=wZdpNglLbt8"
+    }
+  ]
+}

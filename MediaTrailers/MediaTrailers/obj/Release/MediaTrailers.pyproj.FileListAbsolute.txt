@@ -1,0 +1,9 @@
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\AzureSetup.cfg
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\Microsoft.PythonTools.AzureSetup.exe
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\Microsoft.PythonTools.AzureSetup.exe.config
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\bin\wfastcgi.py
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Release\web.config
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Release\web.debug.config
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\obj\Release\deployment-updated-orig-prefix.txt
+C:\Users\darren\Source\Repos\media-trailers\MediaTrailers\MediaTrailers\ptvs_virtualenv_proxy.py
